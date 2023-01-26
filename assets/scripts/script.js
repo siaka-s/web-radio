@@ -124,7 +124,7 @@ function gotoNextSong(playImmediately) {
 }
 
 // Change la progression du song ad on click sur la bar de progression
-function setProgress(ev) {
+function Progression(ev) {
   const totalWidth = this.clientWidth;
   const clickWidth = ev.offsetX;
   const clickWidthRatio = clickWidth / totalWidth;
@@ -147,7 +147,7 @@ prev.addEventListener('click', gotoPreviousSong);
 next.addEventListener('click', gotoNextSong.bind(null, false));
 
 // Déplacer à un endroit différent dans la chanson
-progressContainer.addEventListener('click', setProgress);
+progressContainer.addEventListener('click', Progression);
 
 // au click sur matin 
 matin.addEventListener('click', playPauseMedia);
